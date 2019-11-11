@@ -1,0 +1,34 @@
+.navbar {
+  background-color: none;
+  background-image: none;
+  background-repeat: no-repeat;
+  z-index: 3;
+  .logo {
+    height: 60px;
+    position: relative;
+    top: 2rem;
+    left: 6rem;
+  }
+}
+.navbar-nav {
+  position: relative;
+  top: 2.4rem;
+  left: -8rem;
+}
+.nav-link {
+  justify-content: space-between;
+  padding-right: 3rem;
+  color: white;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  &:hover {
+    color: #d32f2f;
+  }
+}
+.custom-button--blank {
+  position: relative;
+  top: -.5rem;
+}
+.nav-item {
+  padding-right: 2rem;
+}
