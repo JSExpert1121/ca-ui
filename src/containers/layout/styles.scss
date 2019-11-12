@@ -2,11 +2,18 @@
 
 $light-color: rgb(234, 234, 234);
 
+header {
+  width: 100vw;
+  display: flex !important;
+  justify-content: center;
+}
 nav {
   z-index: 10;
+  max-width: 1024px;
   flex-direction: row;
   width: 100%;
   margin: 0;
+  text-align: center;
 }
 
 #app-navbar > ul > li > a {

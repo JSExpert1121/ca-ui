@@ -8,6 +8,7 @@ $back-color: rgb(233, 245, 241);
 
 .home-page-contents {
   position: relative;
+  max-width: 1024px;
   .info-pane {
     position: absolute;
     display: flex;

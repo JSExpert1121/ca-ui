@@ -13,6 +13,8 @@ import ProgramCard from 'components/Card/ProgramCard';
 import SvgCard from 'components/Card/SvgCard';
 import MinusItem from 'components/Others/Minus';
 
+import $ from 'jquery';
+
 import heroImage from '../../../assets/images/home-page-hero-img.jpg';
 import aboutImage from '../../../assets/images/about.jpg';
 import avatarImage from '../../../assets/images/avatar.jpg';
@@ -28,6 +30,12 @@ import LinkedinIcon from '../../../assets/svg/social/linkedin-letters.svg';
 import './styles.scss';
 
 const HomePage = () => {
+  const [dirty, setDirty] = React.useState(false);
+  React.useEffect(() => {
+    console.log($('[data-toggle="popover"]'));
+    // $('[data-toggle="popover"]').popover();
+  }, [dirty]);
+
   const goNext = () => {
     console.log('HeroPanel.goNext');
   };
@@ -100,7 +108,7 @@ const HomePage = () => {
   ];
 
   return (
-    <section id="contents" className="home-page-contents bg-gray">
+    <section id="contents" className="home-page-contents bg-gray container p-0">
       <article className="hero-wrapper" id="home-page-logo">
         <img
           className="d-block w-100 hero-image"
