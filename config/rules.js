@@ -1,17 +1,14 @@
 export default [
   { test: /\.(js|jsx)$/, loader: 'babel-loader', exclude: /node_modules/ },
   {
-    test: /\.(sa|sc|c)ss$/,
-    exclude: /node_modules/,
+    test: /\.s[ac]ss$/i,
     use: [
+      // Creates `style` nodes from JS strings
       'style-loader',
+      // Translates CSS into CommonJS
       'css-loader',
-      {
-        loader: 'sass-loader',
-        options: {
-          webpackImporter: false,
-        },
-      },
+      // Compiles Sass to CSS
+      'sass-loader',
     ],
   },
   {
@@ -23,21 +20,29 @@ export default [
     },
   },
   {
-    test: /\.(png|jpe?g|svg|gif)$/i,
+    test: /\.(png|jpe?g|gif)$/i,
     use: [
       {
         loader: 'file-loader',
       },
     ],
   },
-  { 
-    test: /\.react.svg$/, use: ['svgr/webpack'] 
-  },
-  { 
-    test: /\.svg$/, use: ['file-loader'] 
+  {
+    test: /\.svg$/,
+    use: [
+      {
+        loader: 'babel-loader',
+      },
+      {
+        loader: 'react-svg-loader',
+        options: {
+          jsx: true, // true outputs JSX tags
+        },
+      },
+    ],
   },
   {
-    test: /\.(eot|woff|woff2|ttf|svg)(\?\S*)?$/,
+    test: /\.(eot|woff|woff2|ttf)(\?\S*)?$/,
     loader: 'file-loader',
   },
 ];

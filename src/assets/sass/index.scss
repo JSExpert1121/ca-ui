@@ -2,3 +2,38 @@
 @import './abstracts/_mixins';
 @import './base/typography';
 @import './base/_base';
+
+$light-color: rgb(192, 192, 192);
+
+.back-red {
+  background-color: $ca-color-primary-red;
+  color: $ca-color-primary-light-gray;
+}
+
+.color-red {
+  color: $ca-color-primary-red;
+}
+
+.font-xs {
+  font-size: $font-size-xs;
+}
+
+.font-sm {
+  font-size: $font-size-sm;
+}
+
+.font-md {
+  font-size: $font-size-base;
+}
+
+.font-xxxl {
+  font-size: $font-size-xxxl;
+}
+
+.letter-spacing {
+  letter-spacing: 0.2rem;
+}
+
+.font-light {
+  color: $light-color;
+}

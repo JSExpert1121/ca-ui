@@ -2,7 +2,7 @@ import path from 'path';
 
 import rules from './rules';
 
-const pathToApp = path.resolve(__dirname, '../', 'src', 'app');
+const pathToApp = path.resolve(__dirname, '../', 'src');
 const pathToNodeModules = path.resolve(__dirname, '../', 'node_modules');
 
 export default {

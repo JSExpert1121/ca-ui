@@ -1,0 +1,174 @@
+@import '~bootstrap/scss/bootstrap';
+
+$dark-color: rgba(0, 0, 0, 0.5);
+$back-color: rgb(233, 245, 241);
+.hero-wrapper {
+  position: relative;
+}
+
+.home-page-contents {
+  position: relative;
+  .info-pane {
+    position: absolute;
+    display: flex;
+    bottom: -6rem;
+    left: 0;
+    width: 100%;
+    min-width: 480px;
+    justify-content: center;
+    .pane-item {
+      font-size: 0.875rem;
+      color: $dark-color;
+    }
+    .link {
+      color: rgb(198, 39, 39);
+      font-size: 0.75rem;
+    }
+  }
+  .note-btn {
+    position: absolute;
+    right: 8px;
+    bottom: 32px;
+  }
+}
+
+.hero-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  height: 100%;
+  width: 100%;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 60%;
+    h1 {
+      font-size: 3rem;
+      letter-spacing: 3px;
+      padding-bottom: 1.2rem;
+      font-weight: 400;
+    }
+    .btn {
+      margin-top: 0.5rem;
+    }
+  }
+
+  .hero-image {
+    margin-top: -28rem;
+  }
+  .slide-item {
+    img {
+      height: 500px;
+    }
+  }
+}
+
+.cmn-article {
+  padding-top: 6rem;
+  padding-bottom: 2rem;
+  background-color: $back-color;
+  h3 {
+    padding: 0;
+    padding-top: 2rem;
+    font-size: 2rem;
+  }
+  .cards-wrapper {
+    display: flex;
+    padding: 0 3rem;
+    .icon-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    button {
+      color: $dark-color;
+    }
+    .card-list {
+      width: 100%;
+      display: flex;
+      overflow: hidden;
+    }
+    .personal-card {
+      flex-direction: row;
+    }
+  }
+}
+
+.avatar {
+  max-width: 240px;
+  height: auto;
+  box-shadow: 0 1px 6px rgba(57, 73, 76, 0.35);
+}
+
+@include media-breakpoint-down(md) {
+  .hero-content {
+    &__container {
+      width: 65%;
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}
+@include media-breakpoint-down(sm) {
+  .home-page-contents {
+    .info-pane {
+      bottom: -7rem;
+      .pane-item {
+        font-size: 0.75rem;
+        color: $dark-color;
+      }
+    }
+    .note-btn {
+      position: absolute;
+      right: 0.5rem;
+      bottom: 5rem;
+    }
+  }
+
+  .hero-content {
+    &__container {
+      width: 75%;
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .cmn-article {
+    padding-top: 7rem;
+    .cards-wrapper .personal-card {
+      flex-direction: column;
+      display: block !important;
+    }
+  }
+
+  .avatar {
+    margin: auto;
+  }
+}
+@include media-breakpoint-down(xs) {
+  .home-page-contents {
+    .info-pane {
+      bottom: -8rem;
+    }
+  }
+  .hero-content {
+    &__container {
+      width: 80%;
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

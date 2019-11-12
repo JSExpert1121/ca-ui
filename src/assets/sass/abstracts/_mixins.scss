@@ -19,7 +19,7 @@
 @mixin flexColumn($justify-content: '', $align-items: '') {
   display: flex;
   flex-direction: column;
-  @if $justify-content!= '' {
+  @if $justify-content != '' {
     justify-content: $justify-content;
   }
   @if $align-items != '' {
@@ -30,7 +30,7 @@
 @mixin flexRow($justify-content: '', $align-items: '') {
   display: flex;
   flex-direction: row;
-  @if $justify-content!= '' {
+  @if $justify-content != '' {
     justify-content: $justify-content;
   }
   @if $align-items != '' {
