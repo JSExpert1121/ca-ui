@@ -31,7 +31,7 @@ const PublicFooter = () => {
     <footer className="bg-black text-white">
       <ContactForm />
       <hr className="bg-dark" />
-      <div className="mt-1 mr-5 ml-5 mb-5 p-5 d-flex flex-wrap">
+      <div className="pt-1 pr-5 pl-5 pb-5 w-100 d-flex flex-wrap">
         <div className="col-12 col-md-7 col-lg-5 mt-5">
           <ContactCard contactInfo={contacts} />
         </div>

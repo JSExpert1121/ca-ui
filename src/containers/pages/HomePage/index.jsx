@@ -109,7 +109,7 @@ const HomePage = () => {
         />
         <section className="hero-content">
           <section className="hero-content__container">
-            <h1>{title}</h1>
+            <h1 className="w-100">{title}</h1>
             <Button
               styleType="secondary"
               className="custom-button custom-button--size-variant-sm text-uppercase custom-button--red"
@@ -137,7 +137,15 @@ const HomePage = () => {
           />
         </section>
         <section className="note-btn" id="note-btn">
-          <Button size="sm rounded" styleType="red">
+          <Button
+            size="sm rounded"
+            styleType="red"
+            data-toggle="popover"
+            data-placement="top"
+            title="Popover title"
+            data-html="true"
+            data-content="And here's some amazing content. It's very engaging. Right?"
+          >
             <MessageIcon fill="white" width={24} height={24} />
           </Button>
         </section>
@@ -249,11 +257,12 @@ const HomePage = () => {
           </div>
           <div className="w-100 personal-card d-flex">
             <div className="p-3 col-12 col-md-4 d-flex justify-content-center align-items-center">
-              <img
-                src={avatarImage}
-                className="avatar rounded mw-100"
-                width="auto"
-              />
+              <div className="mw-100">
+                <img
+                  src={avatarImage}
+                  className="avatar w-100 rounded h-auto"
+                />
+              </div>
             </div>
             <div className="p-3 col-12 col-md-8 d-flex flex-column">
               <p className="font-sm text-secondary w-100">{placeholder}</p>
@@ -289,12 +298,15 @@ const HomePage = () => {
           <div className="card-list flex-wrap">
             {uniques.map((item, index) => (
               <div className="p-2 col-12 col-md-6 col-lg-4 d-flex" key={index}>
-                <p className="color-red font-75">{item.no}</p>
+                <p className="color-red font-75 d-inline-block">{item.no}</p>
                 <MinusItem color={redColor} margin="0.625rem" />
-                <div className="d-flex flex-column">
-                  <h5 className="font-875 text-dark">{item.title}</h5>
+                <div className="d-block">
+                  <h5 className="font-875 text-dark w-100">{item.title}</h5>
                   {item.desc.map((desc, idx) => (
-                    <p key={idx} className="font-75 text-secondary m-0 pt-2">
+                    <p
+                      key={idx}
+                      className="font-75 text-secondary m-0 pt-2 w-100"
+                    >
                       {desc}
                     </p>
                   ))}

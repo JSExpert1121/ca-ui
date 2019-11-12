@@ -23,6 +23,7 @@ export default class Header extends Component {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
+          1
           <div className="collapse navbar-collapse" id="app-navbar">
             <ul className="navbar-nav ml-auto align-items-center text-uppercase">
               <li className="nav-item dropdown mr-4">
